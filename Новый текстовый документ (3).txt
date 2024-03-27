@@ -1,0 +1,12 @@
+product_repository := &repository.ProductRepository{DB: db}
+	order_repository := &repository.OrderRepository{DB: db}
+	orderItem_repository := &repository.OrderItemRepository{DB: db}
+	
+	
+	router.HandleFunc("/products", GetProductHandler(productRepo)).Methods("GET")
+	router.HandleFunc("/products", CreateProductHandler(productRepo)).Methods("POST")
+	router.HandleFunc("/products/{id}", DeleteProduct).Methods("DELETE")
+	router.HandleFunc("/products", GetProducts).Methods("GET")
+
+	router.HandleFunc("/orders", GetOrderHandler(orderRepo)).Methods("GET")
+	router.HandleFunc("/orders", CreateOrderHandler(orderRepo)).Methods("POST")

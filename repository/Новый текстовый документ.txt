@@ -1,0 +1,10 @@
+. В файле "D:\main\repository\user_repository.go" замените следующую строку:
+
+Go
+import "github.com/your-package/models"
+
+
+на:
+
+Go
+import "D:\main\models"
